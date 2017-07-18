@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/brightEdge-style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <div class="enteries">
+                <label>
+                    Show
+                    <select id="optionSelected">
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                    </select>
+                    enteries per page
+                </label>
+            </div>
+            <div class="enteries middle">
+                <label>
+                    
+                    <select id="optionSelectedForColumn">
+                        <option value="name">Name</option>
+                        <option value="email">Email</option>
+                        <option value="phonenumber">Phone Number</option>
+                        <option value="city">City</option>
+                        <option value="website">Website</option>
+                    </select>
+                
+                </label>
+                <button id="hideColumn">Hide</button>
+                <button id="showColumn">Show</button>
+            </div>
+            <div class="search">
+                <label>
+                    <input type="search" id="filteredSearch" name="search" placeholder="SearchBy Name">
+                </label>
+            </div>
+        </div>
+        <div>
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th class="sort" data-label='name'>Name</th>
+                        <th class="sort" data-label='email'>email</th>
+                        <th class="sort" data-label='phonenumber'>Phone Number</th>
+                        <th class="sort" data-label='city'>City</th>
+                        <th class="sort" data-label='website'>Website</th>
+                    </tr>
+                </thead>
+                <tbody id="dataToDisplay">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div id="pageNavPosition">
+            <div class="enteries"> <a href="#" onclick="globCon.config.prevPage()" id="btn_prev">Prev</a></div>
+            <div id="middle" class="enteries">Page: <span id="page"></span></div>
+            <div class="enteries"><a href="#" onclick="globCon.config.nextPage()" id="btn_next">Next</a> </div>
+        </div>
+        <label for="footNote">*Click on any cell to edit</label>
+    </div>
+    <script src="js/brightEdge-script.js"></script>
+    <script src="js/brightEdge-paging.js"></script>
+    <script src="js/brightEdge-sorting.js"></script>
+    <script src="js/brightEdge-filter.js"></script>
+</body>
+
+</html>
